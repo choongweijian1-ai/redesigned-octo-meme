@@ -29,7 +29,7 @@ def get_bot_response(user_text: str) -> str:
                 user_text in pattern_lower
             )
         ):
-            return random.choice(intent["responses"])
+            return intent["responses"][0]
 
     return random.choice(noanswer_intent["responses"])
 
